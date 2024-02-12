@@ -1,6 +1,6 @@
-# Replication Files for Universal Difference-in-Differences for Causal Inference in Epidemiology (Tchetgen Tchetgen, Park, Richardson, _Epidemiology_, 2023+) 
+# Replication Files for Regression-Based Proximal Causal Inference (Liu, Park, Li, Tchetgen Tchetgen, _ARXIV_, 2024+) 
 
-This Github repository contains replication files for [Universal Difference-in-Differences (UDiD) for Causal Inference in Epidemiology (Tchetgen Tchetgen, Park, Richardson, 2023)](https://arxiv.org/abs/2302.00840 "UDiD").
+This Github repository contains replication files for Section A.8 Stimulation Study of the paper URegression-Based Proximal Causal Inference (Liu, Park, Li, Tchetgen Tchetgen, 2024)](https://arxiv.org/abs/2402.00335).
 
 
 ## Data

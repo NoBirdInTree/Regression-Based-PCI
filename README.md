@@ -1,25 +1,10 @@
 # Replication Files for Regression-Based Proximal Causal Inference (Liu, Park, Li, Tchetgen Tchetgen, _ARXIV_, 2024+) 
 
-This Github repository contains replication files for Section A.8 Stimulation Study of the paper URegression-Based Proximal Causal Inference (Liu, Park, Li, Tchetgen Tchetgen, 2024)](https://arxiv.org/abs/2402.00335).
-
-
-## Data
-
-The dataset contains birth rate information from 603 municipalities in two states of Brazil, Pernambuco and Rio Grande do Sul. 
-Municipality-level birth rates were measured in 2014 and 2016, before and after the 2015 Zika virus outbreak.
-More details on the source of the dataset are given below:
-* Pre- and Post-treatment Outcomes, Treatment, and log population: zika_Table2.tab in  https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/ENG0IY. 
-See [Taddeo, Amorim, Aquino (2022)](https://www.intlpress.com/site/pub/pages/journals/items/sii/content/vols/0015/0004/a001/index.php?mode=ns "ZB") for details.
-* log population density and proportion of female: https://www.ibge.gov.br/en/statistics/social/income-expenditure-and-consumption/18391-2010-population-census.html?=&t=resultados
-
+This Github repository contains replication files for Section A.8 Stimulation Study of the Appendix of the paper URegression-Based Proximal Causal Inference (Liu, Park, Li, Tchetgen Tchetgen, 2024)](https://arxiv.org/abs/2402.00335).
 
 ## Code
 
-* Brazil_Zika.R replicates the main analysis in Section 4 and Assessment of Covariate Distribution Invariance in Section A.10 of the Appendix.
-* UDID.R contains functions used in Brazil_Zika.R
+The exact data-generation procedure for the synthetic dataset and analysis procedure in A.8 is implemented by the following two files:
 
-## References
-
-Taddeo, Amorim, Aquino (2022) **Causal Measures Using Generalized Difference-in-difference Approach with Nonlinear Models**, _Statistics and Its Interface_, 15(4):399-413 [[link](https://www.intlpress.com/site/pub/pages/journals/items/sii/content/vols/0015/0004/a001/index.php?mode=ns "ZB")]
-
-Tchetgen Tchetgen, Park, Richardson (2023+) **Universal Difference-in-Differences for Causal Inference in Epidemiology**, _Epidemiology (In Press)_ [[arXiv link](https://arxiv.org/abs/2302.00840 "UDiD")]
+* AZU.R: It generates the i.i.d. vectors (A_i,Z_i,U_i) following the joint probability functions derived in A.8 via the accept-reject sampling algorithm.
+* BT_Evaluation.R: It further generates the i.i.d vectors (Y_i,W_i,A_i,Z_i,U_i) from vectors (A_i,Z_i,U_i) specified above following the joint probability functions derived in A.8 via the accept-reject sampling algorithm. Then, using samples drawn from a large dataset composed of i.i.d. vectors (Y_i,W_i,A_i,Z_i,U_i), finite sample analysis is conducted, three estimations -- Two-Stage, Naive, Orale -- are evaluated and their performance at different sample sizes are reported.

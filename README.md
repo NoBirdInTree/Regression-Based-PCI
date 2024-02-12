@@ -4,7 +4,7 @@ This Github repository contains replication files for Section A.8 Stimulation St
 
 ## Code
 
-The repository includes the exact data-generation procedure for the synthetic dataset and the model fitting, as well as the comparison of estimates from different estimators mentioned in A.8. The following two files implement these procedures:
+The repository includes files for the exact data-generation procedure for the synthetic dataset and the model fitting, as well as the comparison of estimates from different estimators mentioned in A.8. The following two files implement these procedures:
 
 * AZU.R: This file generates the i.i.d. vectors (A_i,Z_i,U_i) following the joint probability functions derived in A.8 via the accept-reject sampling algorithm.
 
